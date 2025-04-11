@@ -1,0 +1,425 @@
+// NAVBAR SECTION
+.navbar {
+    &-container {
+      width: 100%;
+      background-color: $background;
+      display: flex;
+      justify-content: space-evenly;
+      padding: 16px 30px;
+      transition: $transition-default;
+    }
+  
+    // NAVIGATION LEFT-SIDE
+    &-left {
+      background-color: $navbar-bg;
+      border-radius: $border-radius-pill;
+      box-shadow: $navbar-shadow;
+      padding: 5px 15px;
+      display: flex;
+      align-items: center;
+      
+      .mxolisi {
+        margin-right: 8px;
+        width: 150px;
+      }
+    }
+  
+    // CENTER NAVIGATION
+    &-center {
+      background-color: $navbar-bg;
+      border-radius: $border-radius-pill;
+      padding: 5px 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      position: relative;
+      transition: $transition-default;
+      
+      &.sticky {
+        position: fixed;
+        top: 16px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+      
+      &.scrolled .additional-link-btn {
+        display: block;
+        position: relative;
+        
+        &:hover::before {
+          animation: shine 1.5s ease-out infinite;
+        }
+        
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100px;
+          height: 100%;
+          background-image: linear-gradient(
+            120deg,
+            rgba(255, 255, 255, 0) 30%,
+            rgba(255, 255, 255, 0.8),
+            rgba(255, 255, 255, 0) 70%
+          );
+          top: 0;
+          left: -100px;
+          opacity: 0.6;
+        }
+      }
+    }
+  
+    // RIGHT-SIDE NAVIGATION
+    &-right {
+      background-color: $navbar-bg;
+      border-radius: $border-radius-pill;
+      padding: 5px 15px;
+      box-shadow: $navbar-shadow;
+      display: flex;
+      align-items: center;
+      color: #333;
+      font-weight: 500;
+      
+      .status-dot {
+        width: 10px;
+        height: 10px;
+        background-color: $secondary-color;
+        border-radius: 50%;
+        margin-right: 10px;
+        animation: pulse 2s infinite;
+      }
+      
+      .email-icon {
+        margin-right: 8px;
+      }
+    }
+  }
+  
+  // Logo styling
+  .logo {
+    width: 32px;
+    height: 32px;
+    background-color: black;
+    border-radius: 50%;
+    margin-right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    &-icon {
+      color: white;
+      font-size: 16px;
+    }
+  }
+  
+  // Navigation links
+  .nav-links {
+    display: flex;
+    list-style: none;
+    
+    li {
+      padding: 8px 4px;
+      position: relative;
+      
+      a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        position: relative;
+        padding: 8px 12px;
+        transition: $transition-default;
+        
+        // Added hover effect
+        &:hover {
+          background: rgba(0, 0, 0, 0.1);
+          border-radius: 20px;
+          color: #000;
+        }
+        
+        // Added active state indicator
+        &.active {
+          color: $main-color;
+          font-weight: 600;
+          
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 3px;
+            background-color: $main-color;
+            border-radius: 3px;
+          }
+        }
+      }
+    }
+  }
+  
+  // Button styles
+  .additional-link-btn,
+  .primary-btn,
+  .book-call-btn {
+    background-color: $main-color;
+    color: $white;
+    text-decoration: none;
+    border-radius: 9999px;
+    box-shadow: $button-shadow;
+    font-weight: bold;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    overflow: hidden;
+    transition: $transition;
+    display: inline-block;
+    text-align: center;
+    font-family: $font-primary;
+
+    &:hover {
+      transform: scale(1.05);
+      border-color: rgba(255, 255, 255, 0.6);
+      background-color: $accent;
+    }
+  }
+
+  .additional-link-btn {
+    display: none;
+    padding: 0.5rem 1.25rem;
+    margin-left: 15px;
+  }
+
+  .navbar-center .scrolled .additional-link-btn {
+    display: inline-block;
+    animation: shine 1.5s ease-out infinite;
+
+    &:hover {
+      animation: shine 1.5s ease-out infinite;
+    }
+  }
+  
+  .primary-btn {
+    font-size: 18px;
+    display: block;
+    padding: 10px 22px;
+    margin-left: 30px;
+    position: relative;
+  }
+
+// Shine effect
+.primary-btn::before,
+.navbar-center .scrolled .additional-link-btn::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    opacity: 0.6;
+  }
+
+  .primary-btn:hover::before,
+  .navbar-center .scrolled .additional-link-btn:hover::before {
+    animation: shine 1.5s ease-out infinite;
+  }
+  
+  // Mobile menu icon
+  .mobile-menu-icon {
+    display: none;
+}
+  // Mobile menu button
+  .mobile-menu-btn {
+    display: none;
+    background: #111;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+    z-index: 1002;
+  }
+  
+  // Brand name (mobile)
+  .brand-name {
+    display: none;
+  }
+  
+  // Mobile status
+  .mobile-status {
+    display: none;
+    align-items: center;
+    color: #333;
+    font-weight: 500;
+    margin-top: 16px;
+    
+    .status-dot {
+      width: 10px;
+      height: 10px;
+      background-color: $secondary-color;
+      border-radius: 50%;
+      margin-right: 8px;
+      animation: pulse 2s infinite;
+    }
+  }
+  
+  // Mobile dropdown menu
+  .mobile-dropdown {
+    display: none;
+    position: fixed;
+    top: 100px;
+    right: 0;
+    width: 250px;
+    height: 35vh;
+    background-color: $navbar-bg;
+    border-radius: 20px 0 0 20px;
+    padding: 10px;
+    padding-top: 25px;
+    z-index: 1001;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    transform: translateX(100%);
+    overflow-y: auto;
+    
+    &.active {
+      transform: translateX(0);
+    }
+  }
+  
+  // Mobile nav links
+  .mobile-nav-links {
+    list-style: none;
+    
+    li {
+      margin: 15px 0;
+      text-align: center;
+      
+      a {
+        text-decoration: none;
+        color: #333;
+        font-size: 18px;
+        font-weight: 600;
+        padding: 5px 10px;
+        position: relative;
+        transition: $transition-default;
+        
+        &:hover {
+          color: $main-color;
+        }
+        
+        &.active {
+          color: $main-color;
+          
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 2px;
+            background-color: $main-color;
+            border-radius: 2px;
+          }
+        }
+      }
+    }
+  }
+  
+  // Overlay when mobile menu is open
+  .mobile-menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($black, 0.5);
+    z-index: 1000;
+  }
+  
+  // Responsive design
+  @media screen and (max-width: 768px) {
+    .navbar {
+      &-container {
+        flex-direction: column;
+        padding: 16px 20px;
+      }
+      
+      &-left, &-right {
+        display: none;
+      }
+      
+      &-center {
+        width: 100%;
+        justify-content: space-between;
+        padding: 5px 15px;
+        
+        &.sticky {
+          width: calc(100% - 40px);
+        }
+      }
+    }
+    
+    .nav-links {
+      display: none;
+    }
+    
+    .mobile-menu-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .book-call-btn {
+      display: block;
+    }
+    
+    .mobile-status {
+      display: flex;
+      justify-content: center;
+    }
+    
+    .logo {
+      margin-right: 0;
+    }
+    
+    .brand-name {
+      display: block;
+      position: absolute;
+      left: 70px;
+      font-size: 22px;
+      font-weight: 800;
+      color: #000;
+    }
+    
+    .additional-link-btn {
+      display: none !important; // Hide on mobile
+    }
+    
+    .mobile-dropdown {
+      display: block;
+    }
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.5; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  
+  @keyframes shine {
+    0% { left: -100px; }
+    60% { left: 100%; }
+    100% { left: 100%; }
+  }
