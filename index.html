@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mxolisi Bhotile - Portfolio</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- SEO & Meta Improvements -->
+    <meta name="description" content="Portfolio of Mxolisi Bhotile - Software Developer, Designer, and Problem Solver">
+    <meta property="og:title" content="Mxolisi Bhotile | Portfolio">
+    <meta property="og:description" content="Showcasing featured projects, certifications, and personal information">
+    
+    <!-- Performance Improvements -->
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="preconnect" href="https://commondatastorage.googleapis.com">
+    
+    <!-- Compiled CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="theme-transition">
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="nav-logo">Mxolisi Bhotile</a>
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#certificates" class="nav-link">Certificates</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <svg class="icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+    </button>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header">
+                <p class="section-subtitle">About Me</p>
+                <h2 class="section-title">A Glimpse Into My World</h2>
+                <p class="section-description">
+                    Learn more about who I am, what I do, and what inspires me.
+                </p>
+            </div>
+
+            <!-- Cards Grid -->
+            <div class="cards-grid top-grid">
+                <!-- Profile Section -->
+                <div class="card">
+                    <div class="profile-section">
+                        <div class="profile-image-container">
+                            <img src="./assets/headshot.jpeg" alt="Profile" class="profile-image">
+                        </div>
+                        <div class="profile-content">
+                            <h2 class="profile-name"><em>Ey, Mxolisi Bhotile</em></h2>
+                            <p class="profile-description">
+                                Just a chill "self-taught" broer who believes technology should be as beautiful as it is functional, so I occasionally try to create intuitive digital experiences - bridging the gap between design and technology.
+                            </p>
+
+                            <div class="profile-social-links">
+                                <a href="https://github.com/yourusername" class="social-link" target="_blank" aria-label="GitHub">
+                                    <i class="fab fa-github social-icon"></i>
+                                </a>
+                                <a href="https://linkedin.com/in/yourusername" class="social-link" target="_blank" aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin-in social-icon"></i>
+                                </a>
+                                <a href="https://twitter.com/yourusername" class="social-link" target="_blank" aria-label="Twitter">
+                                    <i class="fab fa-twitter social-icon"></i>
+                                </a>
+                                <a href="mailto:your.email@example.com" class="social-link" aria-label="Email">
+                                    <i class="fas fa-envelope social-icon"></i>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Hobbies Card -->
+                <div class="card hobbies-card">
+                    <div class="card-header">
+                        <svg class="card-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                        <h3 class="card-title">Beyond The Code</h3>
+                    </div>
+                    <p class="card-description">Drag the tags around to explore my interests.</p>
+                    <div class="hobbies-container" id="hobbies-container"></div>
+                </div>
+            </div>
+
+            <div class="cards-grid bottom-grid">
+                <!-- Toolbox Card -->
+                <div class="card">
+                    <div class="card-header">
+                        <svg class="card-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M21.71 7.29l-5-5a1 1 0 0 0-1.42 0l-5 5-5-5a1 1 0 0 0-1.42 0l-5 5a1 1 0 0 0 0 1.42l5 5 5-5 5 5 5-5a1 1 0 0 0 0-1.42z"/>
+                        </svg>
+                        <h3 class="card-title">Toolkit</h3>
+                    </div>
+                    <p class="card-description">Technologies and tools I use to build digital experiences.</p>
+                    <div class="toolbox-container">
+                        <div class="toolbox-scroll">
+                            <div class="toolbox-row toolbox-row-1" id="toolbox-row-1"></div>
+                            <div class="toolbox-row toolbox-row-2" id="toolbox-row-2"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map Card -->
+                <div class="card">
+                    <div class="card-header">
+                        <svg class="card-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                        <h3 class="card-title">Location</h3>
+                    </div>
+                    <p class="card-description">Based in South Africa, working with clients globally.</p>
+                    <div class="map-container">
+                        <img src="./assets/map.png" alt="Map" class="map-image">
+                        <div class="map-pin">
+                            <div class="pin-dot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Books Card -->
+            <div class="card">
+                <div class="card-header">
+                    <svg class="card-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                    <h3 class="card-title">Reading List</h3>
+                </div>
+                <p class="card-description">Books that have shaped my perspective on technology, design & life.</p>
+                <div class="books-grid" id="books-grid"></div>
+                <a href="#" class="book-more">View all recommendations →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header">
+                <p class="section-subtitle">Real-world Results</p>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-description">
+                    See how I transformed concepts into engaging digital experiences
+                </p>
+            </div>
+
+            <!-- Projects Container -->
+            <ul class="projects-container" id="projectsContainer"></ul>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <p>Professional Credentials</p>
+                </div>
+                <h2 class="section-title">Certifications & Achievements</h2>
+                <p class="section-description">Recognized expertise and continuous learning in various technologies and domains.</p>
+            </div>
+            
+            <div class="certificates-grid" id="certificatesGrid">
+                <!-- Certificates will be rendered by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-box">
+                <div class="grain-overlay"></div>
+                <div class="contact-content">
+                    <div class="contact-text">
+                        <h2>Let's create something amazing together</h2>
+                        <p>Ready to bring your next project to life? Let's connect and discuss how I can help you achieve your goals.</p>
+                    </div>
+                    <a href="mailto:your.email@example.com" class="contact-button" id="contactButton">
+                        <span>Contact Me</span>
+                        <svg class="arrow-icon" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-glow"></div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="copyright">&copy; 2024. All rights reserved.</div>
+                <nav class="footer-nav" id="footerNav">
+                    <!-- Footer links will be rendered by JavaScript -->
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">↑</button>
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Featured Projects",
+        "description": "A collection of selected work showcasing digital projects",
+        "numberOfItems": 3,
+        "itemListOrder": "Descending",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                    "@type": "CreativeWork",
+                    "name": "E-Commerce Platform",
+                    "description": "A modern e-commerce platform with real-time inventory management, secure payment processing, and personalized shopping experiences.",
+                    "datePublished": "2024"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                    "@type": "CreativeWork",
+                    "name": "AI Dashboard Analytics",
+                    "description": "An intelligent analytics dashboard powered by machine learning algorithms with real-time data visualization.",
+                    "datePublished": "2024"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                    "@type": "CreativeWork",
+                    "name": "Social Media App",
+                    "description": "A feature-rich social networking application with real-time messaging and content sharing.",
+                    "datePublished": "2023"
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- JavaScript Files -->
+    <script type="module" src="./js/index.js"></script>
+    <script src="./js/theme.js"></script>
+    <script src="./js/about.js"></script>
+    <script src="./js/projects.js"></script>
+    <script src="./js/certificates.js"></script>
+    <script src="./js/contact.js"></script>
+    <script src="./js/footer.js"></script>
+</body>
+</html>
