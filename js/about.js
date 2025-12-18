@@ -28,7 +28,7 @@ const hobbies = [
     { name: 'Reading', emoji: '📚', left: '25%', top: '50%' },
     { name: 'Music', emoji: '🎵', left: '70%', top: '60%' },
     { name: 'Gaming', emoji: '🎮', left: '15%', top: '75%' },
-    { name: 'Nappin', emoji: '😴', left: '65%', top: '85%' }
+    { name: 'Nappin', emoji: '😴', left: '35%', top: '20%' }
 ];
 
 // Initialize Books

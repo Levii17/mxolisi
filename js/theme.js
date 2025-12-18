@@ -1,7 +1,13 @@
-// Theme Management
+// Theme Management with Multiple Toggle Support
 class ThemeManager {
     constructor() {
-        this.themeToggle = document.getElementById('themeToggle');
+        // Get all theme toggle buttons
+        this.themeToggles = [
+            document.getElementById('navbar-theme-toggle'),
+            document.getElementById('hero-theme-toggle'),
+            document.getElementById('mobile-theme-toggle')
+        ].filter(Boolean); // Remove null values
+        
         this.currentTheme = localStorage.getItem('theme') || 'dark';
         
         this.init();
@@ -11,22 +17,45 @@ class ThemeManager {
         // Set initial theme
         this.setTheme(this.currentTheme);
         
-        // Add event listener
-        this.themeToggle.addEventListener('click', () => this.toggleTheme());
+        // Add event listeners to all toggle buttons
+        this.themeToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => this.toggleTheme());
+        });
         
         // Listen for system theme changes
         this.watchSystemTheme();
+        
+        console.log('Theme manager initialized with', this.themeToggles.length, 'toggles');
     }
     
     setTheme(theme) {
         if (theme === 'light') {
             document.body.classList.add('theme-light');
+            this.updateIcons('light');
         } else {
             document.body.classList.remove('theme-light');
+            this.updateIcons('dark');
         }
         
         this.currentTheme = theme;
         localStorage.setItem('theme', theme);
+    }
+    
+    updateIcons(theme) {
+        this.themeToggles.forEach(toggle => {
+            const sunIcon = toggle.querySelector('.sun-icon');
+            const moonIcon = toggle.querySelector('.moon-icon');
+            
+            if (sunIcon && moonIcon) {
+                if (theme === 'light') {
+                    sunIcon.style.display = 'block';
+                    moonIcon.style.display = 'none';
+                } else {
+                    sunIcon.style.display = 'none';
+                    moonIcon.style.display = 'block';
+                }
+            }
+        });
     }
     
     toggleTheme() {

@@ -201,19 +201,23 @@
     }
 
     .project-card-wrapper {
-        position: relative;
+        position: relative !important;
         top: auto !important;
         padding-top: 0 !important;
+        display: block;
     }
 
     .projects-container {
-        display: block;
+        display: block !important;
         gap: var(--spacing-md);
-        padding-bottom: 0;
+        padding-bottom: 0 !important;
+        grid-template-columns: none !important;
+        grid-template-rows: none !important;
+        grid-auto-rows: auto !important;
     }
 
     .project-card {
-        height: auto;
+        height: auto !important;
         margin-bottom: var(--spacing-md);
     }
 
@@ -277,12 +281,19 @@
         margin: 0;
         border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
         overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .project-media {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
+        position: relative;
+        height: auto;
+        width: auto;
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: contain;
+        display: block;
+        margin: 0;
     }
 }

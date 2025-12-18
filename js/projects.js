@@ -13,7 +13,7 @@ class ProjectRenderer {
     createMediaElement(project) {
         if (project.isVideo) {
             return `
-                <video class="project-media" autoplay loop muted playsinline preload="metadata" 
+                <video class="project-media" autoplay loop muted playsinline style="pointer-events: none;" preload="metadata" 
                        onerror="this.parentElement.innerHTML='<div class=\\'media-fallback\\'>Video unavailable</div>'" 
                        onloadeddata="this.classList.add('loaded')">
                     <source src="${project.display}" type="video/mp4">
@@ -148,7 +148,7 @@ const projects = [
     {
         year: "2025",
         title: "Electrical Symbols SVGs",
-        description: "A web-based library showcasing electrical schematic symbols that comply with South African standards (SANS) and common international conventions. This project provides a visual reference for engineers, electricians, students, and hobbyists working with electrical diagrams.",
+        description: "SANS‑compliant web library of electrical schematic symbols for engineers and students.",
         live_site: "https://levii17.github.io/electricalSymbolPreview/",
         figma_design: "",
         github: "https://github.com/Levii17/electricalSymbolPreview",
@@ -158,7 +158,7 @@ const projects = [
     {
         year: "2025",
         title: "Muriel Schematics Prototype",
-        description: "This is an early-stage prototype intended as a wireframe and UI/UX concept for the future full-featured Muriel Schematics web application. It focuses on layout, interaction flow, and visual design - not on complete functionality or production-ready performance.",
+        description: "Wireframe/UI prototype focused on layout and interaction flow.",
         live_site: "https://muriel-prototype-v2.vercel.app/",
         figma_design: "",
         github: "https://github.com/Levii17/murielPrototype-V2",
@@ -168,7 +168,7 @@ const projects = [
     {
         year: "2025",
         title: "Audio Quote Machine",
-        description: "An interactive web app that plays random audio clips when you press specific keys — built for fun, creativity. Random Audio Playback – Press keys `Q`, `W`, `E`, `A`, `S`, `D`, `Z`, `X`, `C` to trigger unique sounds. Inspired by the FreeCodeCamp Front End Libraries Projects",
+        description: "Drum-style app that plays mapped audio clips via keys Q W E A S D Z X C. Designed as part of FreeCodeCamp curriculum.",
         live_site: "https://drum-machine-ruby-one.vercel.app/",
         figma_design: "",
         github: "https://github.com/Levii17/drumMachine",

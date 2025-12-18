@@ -1,9 +1,9 @@
 // Configuration for footer
 const config = {
     footerLinks: [
-        { title: 'GitHub', href: 'https://github.com/yourusername' },
-        { title: 'LinkedIn', href: 'https://linkedin.com/in/yourusername' },
-        { title: 'Twitter', href: 'https://twitter.com/yourusername' }
+        { title: 'GitHub', href: 'https://github.com/Levii17' },
+        { title: 'Instagram', href: 'https://www.instagram.com/x_mxolisi_x?igsh=MWNwYzM1b3E4dzVwMA==' },
+        { title: 'Twitter', href: 'https://x.com/x_mxolisi_x?t=fcSb40pEpo656AECH4tlfQ&s=09' }
     ]
 };
 

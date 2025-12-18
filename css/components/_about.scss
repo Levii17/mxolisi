@@ -99,6 +99,7 @@
     .profile-section {
         text-align: center;
     }
+
     .cards-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -125,8 +126,8 @@
 /* Books Card */
 .books-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-sm);
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--spacing-xs);
     margin-bottom: var(--spacing-md);
 }
 
@@ -142,7 +143,8 @@
 
 .book-image {
     width: 100%;
-    aspect-ratio: 2/3;
+    max-width: 150px;
+    height: 190px;
     object-fit: cover;
     border-radius: var(--radius-sm);
     border: 1px solid var(--color-border);
@@ -228,6 +230,7 @@
     display: flex;
     flex-direction: column;
 }
+
 .hobbies-container {
     height: 220px;
     position: relative;
@@ -280,12 +283,6 @@
     height: 100%;
     object-fit: cover;
     filter: grayscale(20%) contrast(110%);
-    transition: var(--transition-normal);
-}
-
-.map-container:hover .map-image {
-    transform: scale(1.05);
-    filter: grayscale(0%) contrast(100%);
 }
 
 .map-pin {
@@ -293,36 +290,78 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
 }
 
-.pin-dot {
-    width: 16px;
-    height: 16px;
-    background: var(--color-accent);
+.pin-pulse {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, #6ee7b7, #38bdf8);
     border-radius: 50%;
-    border: 3px solid var(--color-surface);
-    box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.3);
-    animation: pulse 2s infinite;
+    animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.pin-base {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, #6ee7b7, #38bdf8);
+    border-radius: 50%;
+    border: 2px solid rgba(10, 10, 10, 0.3);
+}
+
+.pin-emoji {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+}
+
+@keyframes ping {
+
+    75%,
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
 }
 
 /* Responsive Styles for About Section */
 @media (max-width: 768px) {
     .books-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 0.5rem;
+        align-items: start;
     }
-    
+
+    .book-item {
+        display: block; /* ensure each item fills its grid cell */
+        width: 100%;
+    }
+
+    .book-image {
+        width: 100%;
+        height: auto; /* preserve aspect ratio and avoid overflow/stacking */
+        max-width: 150px;
+        margin: 0 auto;
+        display: block;
+    }
+
     .cards-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .toolbox-row {
         gap: 15px;
     }
-    
+
     .tool-item {
         padding: 10px 16px;
     }
-    
+
     .hobby-tag {
         padding: 8px 15px;
         font-size: 0.9rem;
@@ -333,11 +372,11 @@
     .books-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .section-title {
         font-size: 1.8rem;
     }
-    
+
     .profile-section {
         text-align: center;
     }

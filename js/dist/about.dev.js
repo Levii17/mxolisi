@@ -58,8 +58,8 @@ var hobbies = [{
 }, {
   name: 'Nappin',
   emoji: '😴',
-  left: '65%',
-  top: '85%'
+  left: '35%',
+  top: '20%'
 }]; // Initialize Books
 
 function initBooks() {
