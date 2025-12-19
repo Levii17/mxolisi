@@ -18,13 +18,13 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
 // About Section Data
 var books = [{
-  image: "./assets/books/51MaNQzHTQL.jpg",
+  image: "./assets/books/permanent_record.png",
   link: "#"
 }, {
-  image: "./assets/books/81Rnac2Fq+L.jpg",
+  image: "./assets/books/computational_thinking.png",
   link: "#"
 }, {
-  image: "./assets/books/dazai.jpg",
+  image: "./assets/books/no_longer_human.jpg",
   link: "#"
 }]; // Toolbox Items
 

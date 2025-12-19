@@ -1,15 +1,15 @@
 // About Section Data
 const books = [
     {
-        image: "./assets/books/51MaNQzHTQL.jpg",
+        image: "./assets/books/permanent_record.png",
         link: "#"
     },
     {
-        image: "./assets/books/81Rnac2Fq+L.jpg",
+        image: "./assets/books/computational_thinking.png",
         link: "#"
     },
     {
-        image: "./assets/books/dazai.jpg",
+        image: "./assets/books/no_longer_human.jpg",
         link: "#"
     }
 ];
