@@ -130,7 +130,7 @@
     cursor: pointer;
     opacity: 0;
     transition: all var(--transition-normal);
-    z-index: var(--z-toast);
+    z-index: 2000;
     display: flex;
     align-items: center;
     justify-content: center;
