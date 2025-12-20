@@ -1,0 +1,383 @@
+/* About Section Styles */
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: var(--spacing-xl);
+    text-align: center;
+}
+
+.profile-image-container {
+    flex-shrink: 0;
+    margin-bottom: var(--spacing-md);
+    position: relative;
+}
+
+.profile-image {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--color-border);
+    transition: var(--transition-normal);
+    background: var(--gradient-surface);
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+    border-color: var(--color-accent);
+}
+
+.profile-content {
+    flex: 1;
+    width: 100%;
+}
+
+.profile-name {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: var(--spacing-xs);
+}
+
+.profile-description {
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-bottom: var(--spacing-sm);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile-social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-xs);
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: var(--color-surface-secondary);
+    color: var(--color-text);
+    text-decoration: none;
+    transition: var(--transition-normal);
+}
+
+.social-link:hover {
+    background: var(--color-accent);
+    color: var(--color-surface);
+    transform: translateY(-3px);
+}
+
+.social-icon {
+    font-size: 1rem;
+}
+
+/* Cards Grid for About Section */
+.cards-grid {
+    display: grid;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.top-grid {
+    grid-template-columns: 1fr;
+}
+
+.bottom-grid {
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    .profile-section {
+        text-align: center;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .top-grid {
+        grid-template-columns: 2fr 3fr;
+    }
+
+    .bottom-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+@media (min-width: 1024px) {
+    .top-grid {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .bottom-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+/* Books Card */
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-md);
+}
+
+.book-item {
+    display: block;
+    text-decoration: none;
+    transition: var(--transition-normal);
+}
+
+.book-item:hover {
+    transform: translateY(-5px);
+}
+
+.book-image {
+    width: 100%;
+    max-width: 150px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-border);
+    transition: var(--transition-normal);
+}
+
+.book-item:hover .book-image {
+    border-color: var(--color-accent);
+    box-shadow: 0 10px 20px var(--color-shadow);
+}
+
+.book-more {
+    display: inline-block;
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: var(--transition-normal);
+}
+
+.book-more:hover {
+    transform: translateX(5px);
+}
+
+/* Toolbox Card */
+.toolbox-container {
+    position: relative;
+    margin-top: var(--spacing-xs);
+    overflow: hidden;
+    height: 220px;
+}
+
+.toolbox-scroll {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.toolbox-row {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    width: max-content;
+}
+
+.toolbox-row-1 {
+    animation: scroll-left 30s linear infinite;
+}
+
+.toolbox-row-2 {
+    animation: scroll-right 25s linear infinite;
+}
+
+.tool-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: var(--color-surface-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-size: 0.95rem;
+    transition: var(--transition-normal);
+    flex-shrink: 0;
+}
+
+.tool-item:hover {
+    background: var(--color-surface-tertiary);
+    transform: translateY(-3px);
+}
+
+.tool-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent);
+}
+
+/* Hobbies Card */
+.hobbies-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.hobbies-container {
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+    margin-top: var(--spacing-xs);
+}
+
+.hobby-tag {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: var(--gradient-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 9999px;
+    font-size: 0.95rem;
+    cursor: grab;
+    user-select: none;
+    touch-action: none;
+    transition: var(--transition-normal);
+    box-shadow: 0 4px 12px var(--color-shadow);
+}
+
+.hobby-tag:hover {
+    background: var(--color-surface-tertiary);
+    transform: scale(1.05);
+}
+
+.hobby-tag:active {
+    cursor: grabbing;
+}
+
+.hobby-emoji {
+    font-size: 1.2rem;
+}
+
+/* Map Card */
+.map-container {
+    height: 200px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    position: relative;
+    margin-top: var(--spacing-xs);
+    border: 1px solid var(--color-border);
+}
+
+.map-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(20%) contrast(110%);
+}
+
+.map-pin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+}
+
+.pin-pulse {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, #6ee7b7, #38bdf8);
+    border-radius: 50%;
+    animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.pin-base {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, #6ee7b7, #38bdf8);
+    border-radius: 50%;
+    border: 2px solid rgba(10, 10, 10, 0.3);
+}
+
+.pin-emoji {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+}
+
+@keyframes ping {
+
+    75%,
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+/* Responsive Styles for About Section */
+@media (max-width: 768px) {
+    .books-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 0.5rem;
+        align-items: start;
+    }
+
+    .book-item {
+        display: block; /* ensure each item fills its grid cell */
+        width: 100%;
+    }
+
+    .book-image {
+        width: 100%;
+        height: auto; /* preserve aspect ratio and avoid overflow/stacking */
+        max-width: 150px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .toolbox-row {
+        gap: 15px;
+    }
+
+    .tool-item {
+        padding: 10px 16px;
+    }
+
+    .hobby-tag {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .books-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .profile-section {
+        text-align: center;
+    }
+}

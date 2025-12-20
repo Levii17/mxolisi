@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mxolisi Bhotile - Portfolio</title>
+    <title>Mxolisi Bhotile</title>
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -15,7 +15,21 @@
     <meta property="og:description" content="Showcasing featured projects, certifications, and personal information">
     
     <!-- Compiled CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap">
+    
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/mb2_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/mb2_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/mb2_io/favicon-16x16.png">
+
+    <!-- fetch 3d model -->
+    <link rel="preload" href="/model/mxolisi.glb" as="fetch" crossorigin>
+
 </head>
 <body class="theme-transition">
     
@@ -24,7 +38,7 @@
         <nav class="navbar-container">
             
             <div class="navbar-left">
-                <img src="https://github.com/Levii17/images/blob/main/logos/logo2_vectorized.png?raw=true" 
+                <img src="https://github.com/Levii17/assets/blob/main/logos/logo2_vectorized.png?raw=true" 
                      class="mxolisi" alt="Mxolisi Bhotile - Web Developer Logo" width="200" height="40" loading="lazy">
             </div>
             
@@ -45,26 +59,7 @@
                 <span class="brand-name">Mxolisi</span>
                 
                 <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">☰</button>
-
             </div>
-            
-            <!-- Theme Toggle in Navbar -->
-            <button id="navbar-theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                </svg>
-                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
-                    <circle cx="12" cy="12" r="5"></circle>
-                    <line x1="12" y1="1" x2="12" y2="3"></line>
-                    <line x1="12" y1="21" x2="12" y2="23"></line>
-                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                    <line x1="1" y1="12" x2="3" y2="12"></line>
-                    <line x1="21" y1="12" x2="23" y2="12"></line>
-                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                </svg>
-            </button>
 
             <div class="navbar-right">
                 <div class="status-dot"></div>
@@ -86,26 +81,6 @@
                 <li><a href="#certificates">Certificates</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-
-            <!-- Theme toggle for mobile menu -->
-            <div class="mobile-theme-container">
-                <button id="mobile-theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: block;">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
         </div>
         <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
 
@@ -114,42 +89,46 @@
     <!-- HERO -->
     <section class="hero" id="hero">
         <div class="particles-js" id="particles-js"></div>
+        <canvas id="three-canvas">Your browser does not support 3D graphics.</canvas>
+
         
         <div class="hero-content">
-            <div class="hero-title-container">
-                <!-- Theme Toggle near heading -->
-                <button id="hero-theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: block;">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
 
+            <!-- Theme Toggle near heading -->
+            <button id="hero-theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: block;">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+            </button>
+
+            <div class="hero-title-container">
                 <div class="hero-text">
-                    <h1>Building Exceptional User Experiences</h1>
+                    <h1>Building Exceptional <br> User Experiences</h1>
                     <p>I dabble in creating thoughtful digital experiences that blend design and functionality.</p>
                 </div>
             </div>
 
-            <div class="cta-buttons">
-                <a href="https://cal.com/mxolisi-bhotile-jro26h/15min?overlayCalendar=true" class="primary-btn">Book a call</a>
-                
-                <div class="social-icons">
-                    <a href="https://github.com/Levii17" aria-label="GitHub"><i class='bx bxl-github'></i></a>
-                    <a href="https://www.instagram.com/x_mxolisi_x?igsh=MWNwYzM1b3E4dzVwMA==" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
-                    <a href="https://wa.me/+27671884529" aria-label="WhatsApp"><i class='bx bxl-whatsapp'></i></a>
-                    <a href="https://x.com/x_mxolisi_x?t=fcSb40pEpo656AECH4tlfQ&s=09" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                </div>
+              <div class="button-wrapper">
+                <a href="#projects" class="btn btn-outline">
+                  Explore My Work
+                  <span class="arrow">↓</span>
+                </a>
+            
+                <a href="#contact" class="btn btn-filled">
+                  <span class="emoji">👋</span>
+                  Let's Connect
+                </a>
             </div>
         </div>
     </section>
@@ -187,7 +166,7 @@
                 <div class="card">
                     <div class="profile-section">
                         <div class="profile-image-container">
-                            <img src="./assets/headshot.jpeg" alt="Profile" class="profile-image">
+                            <img src="/assets/headshot.jpeg" alt="Profile" class="profile-image">
                         </div>
                         <div class="profile-content">
                             <h2 class="profile-name"><em>Ey, Mxolisi Bhotile</em></h2>
@@ -199,9 +178,12 @@
                                 <a href="https://github.com/Levii17" class="social-link" target="_blank" aria-label="GitHub">
                                     <i class="fab fa-github social-icon"></i>
                                 </a>
-                                <a href="https://linkedin.com/in/yourusername" class="social-link" target="_blank" aria-label="LinkedIn">
-                                    <i class="fab fa-linkedin-in social-icon"></i>
+                                <a href="https://wa.me/+27671884529" class="social-link" target="_blank" aria-label="WhatsApp">
+                                    <i class='bx bxl-whatsapp'></i>
                                 </a>
+                                <!-- <a href="https://linkedin.com/in/yourusername" class="social-link" target="_blank" aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin-in social-icon"></i>
+                                </a> -->
                                 <a href="https://x.com/x_mxolisi_x?t=fcSb40pEpo656AECH4tlfQ&s=09" class="social-link" target="_blank" aria-label="Twitter">
                                     <i class="fab fa-twitter social-icon"></i>
                                 </a>
@@ -255,7 +237,7 @@
                     </div>
                     <p class="card-description">Based in South Africa, working with clients globally.</p>
                     <div class="map-container">
-                        <img src="./assets/map.png" alt="Map" class="map-image">
+                        <img src="/assets/map.png" alt="Map" class="map-image">
                         <div class="map-pin">
                             <div class="pin-pulse"></div>
                             <div class="pin-base"></div>
@@ -285,7 +267,7 @@
     <section id="certificates" class="certificates-section">
         <div class="container">
             <div class="section-header">
-                <div class="section-badge">
+                <div class="section-subtitle">
                     <p>Professional Credentials</p>
                 </div>
                 <h2 class="section-title">Certifications & Achievements</h2>
@@ -334,12 +316,13 @@
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     
     <!-- JavaScript Files -->
-    <script type="module" src="./js/index.js"></script>
-    <script type="module" src="./js/theme.js"></script>
-    <script type="module" src="./js/about.js"></script>
-    <script type="module" src="./js/projects.js"></script>
-    <script type="module" src="./js/certificates.js"></script>
-    <script type="module" src="./js/contact.js"></script>
-    <script type="module" src="./js/footer.js"></script>
+    <script type="module" src="./src/js/index.js"></script>
+    <script type="module" src="./src/js/theme.js"></script>
+    <script type="module" src="./src/js/model.js"></script>
+    <script type="module" src="./src/js/about.js"></script>
+    <script type="module" src="./src/js/projects.js"></script>
+    <script type="module" src="./src/js/certificates.js"></script>
+    <script type="module" src="./src/js/contact.js"></script>
+    <script type="module" src="./src/js/footer.js"></script>
 </body>
 </html>

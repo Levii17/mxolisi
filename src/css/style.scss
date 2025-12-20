@@ -1,0 +1,14 @@
+// Import SCSS files
+@use './globals/variables';
+@use './globals/base';
+@use './globals/animations';
+@use './globals/buttons';
+
+// Import components
+@use './components/navbar';
+@use './components/hero';
+@use './components/projects';
+@use './components/about';
+@use './components/certificates';
+@use './components/contact';
+@use './components/footer';
