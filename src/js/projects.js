@@ -146,6 +146,36 @@ class ProjectRenderer {
 // Sample project data
 const projects = [
     {
+        year: "2026",
+        title: "Aeternum",
+        description: "A web application built with Next.js and TypeScript, showcasing a portfolio of web design and system architecture projects. ",
+        live_site: "https://aeternum-six.vercel.app/",
+        figma_design: "",
+        github: "https://github.com/Levii17/Aeternum",
+        display: "/assets/works/aeternum.mp4",
+        isVideo: true
+    },
+    {
+        year: "2026",
+        title: "Information Vault",
+        description: "Your personal memory bank for storing and connecting knowledge across different subjects.",
+        live_site: "https://information-vault.vercel.app/",
+        figma_design: "",
+        github: "https://github.com/Levii17/Information-Vault",
+        display: "/assets/works/infoVault.png",
+        isVideo: false
+    },
+    {
+        year: "2026",
+        title: "Think Board",
+        description: "Note Taking App. Built with the MERN Stack (MongoDB, Express, React, Node). Built and Tested a Fully Functional REST API, Rate Limiting with Upstash Redis. Completely Responsive UI.",
+        live_site: "https://levii17.github.io/constructionClientPortal/",
+        figma_design: "",
+        github: "https://github.com/Levii17/think-board",
+        display: "/assets/works/ThinkBoard.mp4",
+        isVideo: true
+    },
+    {
         year: "2025",
         title: "Client Portal",
         description: "A secure web application for clients to access their project information, documents, and communication with the service provider. [Prototype]",
@@ -165,16 +195,16 @@ const projects = [
         display: "/assets/works/electrical_symbols.mp4",
         isVideo: true
     },
-    {
-        year: "2025",
-        title: "Muriel Schematics Prototype",
-        description: "Wireframe/UI prototype focused on layout and interaction flow. It demonstrates responsive layout and interaction patterns for a smooth user experience.",
-        live_site: "https://muriel-prototype-v2.vercel.app/",
-        figma_design: "",
-        github: "https://github.com/Levii17/murielPrototype-V2",
-        display: "/assets/works/muriel_prototype.png",
-        isVideo: false
-    },
+    // {
+    //     year: "2025",
+    //     title: "Muriel Schematics Prototype",
+    //     description: "Wireframe/UI prototype focused on layout and interaction flow. It demonstrates responsive layout and interaction patterns for a smooth user experience.",
+    //     live_site: "https://muriel-prototype-v2.vercel.app/",
+    //     figma_design: "",
+    //     github: "https://github.com/Levii17/murielPrototype-V2",
+    //     display: "/assets/works/muriel_prototype.png",
+    //     isVideo: false
+    // },
     {
         year: "2025",
         title: "Audio Quote Machine",

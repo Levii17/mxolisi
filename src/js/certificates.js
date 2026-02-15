@@ -20,6 +20,11 @@ const config = {
             image: '/assets/cert/Data Visualization.png',
             issuer: 'FreeCodeCamp',
             verifyUrl: 'https://freecodecamp.org/certification/mxolisibhotile/data-visualization'
+        },
+        {
+            image: '/assets/cert/intro-to-cybersecurity.png',
+            issuer: 'Cisco',
+            verifyUrl: 'https://www.credly.com/badges/7bc8afd3-ca54-4fdd-b91d-24df9ef19964'
         }
         // {
         //     image: './assets/cert/FNB.png',
